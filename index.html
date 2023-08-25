@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="cv-title">
+            <h2>CV Hazırlama Aracı</h2>
+        </div>
+
+        <div class="cv-body">
+
+            <div class="column cv-left">
+                <div class="column-title">
+                    <h3>Metin İçerikleri</h3>
+                </div>
+                
+                <hr class="line" />
+                
+                <table>
+                    <tr>
+                        <td colspan="2"><h4>İsim Kutusu</h4></td>
+                    </tr>
+                    <tr>
+                        <td><label for="adsoyad">Ad Soyad:</label></td>
+                        <td>
+                            <input 
+                            type="text"
+                            id="adsoyad"
+                            name="adsoyad"
+                            onkeyup="handleChangeText('adValue',event.target.value)">                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="unvan">Ünvan:</label></td>
+                        <td>
+                            <input 
+                            type="text"
+                            id="unvan"
+                            name="unvan"
+                            onkeyup="handleChangeText('unvanValue',event.target.value)">                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h4>İletişim Bilgileri</h4></td>
+                    </tr>
+                    <tr>
+                        <td><label for="telefon">Telefon:</label></td>
+                        <td>
+                            <input 
+                            type="text"
+                            id="telefon"
+                            name="telefon"
+                            onkeyup="handleChangeText('telefonValue',event.target.value)">                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="mail">Mail:</label></td>
+                        <td>
+                            <input 
+                            type="mail"
+                            id="mail"
+                            name="mail"
+                            onkeyup="handleChangeText('mailValue',event.target.value)">                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="web">Web:</label></td>
+                        <td>
+                            <input 
+                            type="text"
+                            id="web"
+                            name="web"
+                            onkeyup="handleChangeText('webValue',event.target.value)">                       
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="adres">Adres:</label></td>
+                        <td>
+                            <textarea 
+                                name="adres" 
+                                id="adres" 
+                                cols="22" 
+                                rows="5"
+                                onkeyup="handleChangeText('adresValue',event.target.value)">                               
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h4>Eğitim Bilgileri</h4></td>
+                    </tr>
+                    <tr>
+                        <td><label for="aciklamaEgitim">Açıklama:</label></td>
+                        <td>
+                            <textarea 
+                                name="aciklamaEgitim" 
+                                id="aciklamaEgitim" 
+                                cols="22" 
+                                rows="5"
+                                onkeyup="handleChangeText('aciklamaEgitimValue',event.target.value)">                               
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="okulSayisi">Okul Sayısı:</label></td>
+                        <td>
+                            <select name="okulSayisi" id="okulSayisi" onkeyup="handleChangeText('okulSayisi',event.target.value)">
+                                <option value="">Seçiniz</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>                             
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h4>Yetenekler</h4></td>
+                    </tr>
+                    <tr>
+                        <td><label for="aciklamaYetenek">Açıklama:</label></td>
+                        <td>
+                            <textarea 
+                                name="aciklamaYetenek" 
+                                id="aciklamaYetenek" 
+                                cols="22" 
+                                rows="5"
+                                onkeyup="handleChangeText('yeteneklerValue',event.target.value)">                              
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="yetenekSayisi">Yetenek Sayısı:</label></td>
+                        <td>
+                            <select name="yetenekSayisi" id="yetenekSayisi">
+                                <option value="">Seçiniz</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h4>Hakkımda</h4></td>
+                    </tr>
+                    <tr>
+                        <td><label for="aciklamaHakkimda">Açıklama:</label></td>
+                        <td>
+                            <textarea 
+                                name="aciklamaHakkimda" 
+                                id="aciklamaHakkimda" 
+                                cols="22" 
+                                rows="5"
+                                onkeyup="handleChangeText('hakkımdaValue',event.target.value)">                               
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>   
+                        <td colspan="2"><h4>İş Deneyimi</h4></td>    
+                    </tr>
+                    <tr>
+                        <td><label for="aciklamaIs">Açıklama:</label></td>
+                        <td>
+                            <textarea 
+                                name="aciklamaIs" 
+                                id="aciklamaIs" 
+                                cols="22" 
+                                rows="5"
+                                onkeyup="handleChangeText('isdeneyimiValue',event.target.value)">                              
+                            </textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="column cv-middle">
+                <div class="column-title">
+                    <h3>Görünüş</h3>
+                </div>
+
+                <hr class="line" />
+
+                <table>
+                    <tr>
+                        <td colspan="2"><h4>Renkler</h4></td>
+                    </tr>
+                    <tr>
+                        <td><label for="arkaPlanRenk">Arkaplan Rengi:</label></td>
+                        <td>
+                            <input 
+                            type="color" 
+                            id="arkaPlanRenk" 
+                            name="arkaPlanRenk"
+                            value="#dd2e2e"
+                            oninput="dataBind(this)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="solKolonRenk">Sol Kolon Rengi:</label></td>
+                        <td>
+                            <input 
+                            type="color" 
+                            id="solKolonRenk" 
+                            name="solKolonRenk"
+                            value="#dd2e2e"
+                            oninput="dataBind(this)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="isimKutusuRenk">İsim Kutusu Rengi:</label></td>
+                        <td>
+                            <input 
+                            type="color" 
+                            id="isimKutusuRenk" 
+                            name="isimKutusuRenk"
+                            value="#dd2e2e"
+                            oninput="dataBind(this)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="isimKutusuYaziRenk">İsim Kutusu Yazı Rengi:</label></td>
+                        <td>
+                            <input 
+                            type="color" 
+                            id="isimKutusuYaziRenk" 
+                            name="isimKutusuYaziRenk"
+                            value="#dd2e2e"
+                            oninput="dataBind(this)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h4>Yazı Tipi</h4></td>
+                    </tr>
+                    <tr>
+                        <td><label for="yaziTipi">Yazı Tipi:</label></td>
+                        <td>
+                            <select name="yaziTipi" id="yaziTipi" onchange="yaziTipiniDegistir(this.value)">
+                                <option value="timesNewRoman">Times New Roman</option>
+                                <option value="courierNew">Courier New</option>
+                                <option value="lucidaHandwriting">Lucida Handwriting</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h4>Fotoğraf</h4></td>
+                    </tr>
+                    <tr>
+                        <td><label for="fotoCerceveSekli">Fotoğraf Çerçevesi Şekli:</label></td>
+                        <td>
+                            <select id="fotoCerceveSekli" name="fotoCerceveSekli" onchange="changePhotoFrameShape(this.value)">                                                                                 
+                                <option value="round">Yuvarlak</option>
+                                <option value="square">Köşeli</option>
+                                <option value="oval">Oval</option>
+                            </select>                      
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h4>Başlık Altı Çizgileri</h4></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cizgiRenk">Çizgi Rengi:</label></td>
+                        <td>
+                            <input 
+                            type="color" 
+                            id="cizgiRenk" 
+                            name="cizgiRenk"
+                            value="#dd2e2e"
+                            oninput="dataBind(this)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="cizgiSekli">Çizgi Şekli:</label></td>
+                        <td>
+                            <select name="cizgiSekli" id="cizgiSekli">
+                                <option value="">Seçiminiz</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        
+            <div class="column cv-right">
+                <div class="cv">
+
+                    <div class="solKolon">
+                        <div class="foto">
+                            <img id="profileImage" src="profile.pic.jpg" width="200px" alt=""/>
+                        </div>
+                        <div class="kutu">
+                            <div class="baslik">İLETİŞİM</div>
+                            <div class="icerik">
+                                <ul>
+                                    <li><span id="telefonValue">{ Telefon }</span></li>
+                                    <li><span id="mailValue">{ Mail }</span></li>                     
+                                    <li><span id="adresValue">{ Adres }</span></li>
+                                    <li><span id="webValue"> { Web }</span></li>
+                                </ul>
+                            </div>                                                      
+                        </div>
+                        <div class="kutu">
+                            <div class="baslik">EĞİTİM</div>
+                            <div class=" egitimbaslik">
+                               <span id="aciklamaEgitimValue">{Eğitim İçerikleri}</span>
+                            </div>
+                            <div class=" altbaslik">
+                            </div>         
+                            <div class="icerik">                             
+                            </div>
+                            <div class=" altbaslik">                               
+                            </div>
+                            <div class="icerik">
+                            </div>         
+                            <div class=" altbaslik">
+                            </div>
+                            <div class="icerik">                            
+                            </div>        
+                        </div>
+                        <div class="kutu">
+                            <div class="baslik">YETENEKLER</div>
+                            <div class=" yetenekbaslik">
+                                <span id="yeteneklerValue">{Yeteneklerim}</span>
+                             </div>           
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>           
+                            </ul>                      
+                        </div>
+                    </div>        
+                    <div class="sagKolon">
+                        <div class="isimKutusu">
+                            <div class="isim">
+                                <span id="adValue">{AD SOYAD}</span></div>
+                            <br />
+                            <div class="cizgi"></div>
+                            <br />
+                            <div class="unvan">
+                                <span id="unvanValue">{UNVAN}</span>
+                            </div>
+                        </div>           
+                        <div class="kutu">
+                            <div class="baslik">HAKKIMDA</div>
+                           <span class="hakkimdaicerik" id="hakkımdaValue">Kendinden Bahset.</span>
+                        </div>
+                        <div class="kutu">
+                            <div class="baslik">İŞ DENEYİMİ</div>
+                            <div class="icerik"></div>
+                            <div class="altbaslik">
+                            <span class="isdeneyimiicerik" id="isdeneyimiValue">Daha Önceki İş Tecrübelerinizi Buraya Yazınız.</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+                   
+        </div>
+    </div>
+
+    <script>
+
+        function handleChangeText(spanId,value) {
+            document.getElementById(spanId).innerHTML = value;
+        }
+    
+        function changePhotoFrameShape(selectedShape) {
+            const profileImage = document.getElementById('profileImage');
+            if (selectedShape === "round") {
+                profileImage.style.borderRadius = '50%';
+            } else if (selectedShape === "square") {
+                profileImage.style.borderRadius = '0';
+            } else if (selectedShape === "oval") {
+                profileImage.style.borderRadius = '50% / 30%';
+            }
+        }
+
+        function yaziTipiniDegistir(secilenYaziTipi) {
+            const metinElementleri = document.querySelectorAll('.icerik, .hakkimdaicerik, .isdeneyimiicerik, .unvan, .isim, .egitimbaslik, .yetenekbaslik, .baslik');
+            metinElementleri.forEach(element => {
+                if (secilenYaziTipi === "timesNewRoman") {
+                    element.style.fontFamily = "Times New Roman, serif";
+                } else if (secilenYaziTipi === "courierNew") {
+                    element.style.fontFamily = "Courier New, monospace";
+                } else if (secilenYaziTipi === "lucidaHandwriting") {
+                    element.style.fontFamily = "Lucida Handwriting, cursive";
+                } else {
+                    element.style.fontFamily = "inherit"; 
+                }
+            });
+        }
+
+        function dataBind(element) {
+            const elementId = element.id;
+            const elementValue = element.value;
+            if (elementId === "arkaPlanRenk") {
+                document.querySelector(".sagKolon").style.backgroundColor = elementValue;
+                document.querySelector(".cv-right").style.backgroundColor = elementValue;
+            } else if (elementId === "solKolonRenk") {
+                document.querySelector(".solKolon").style.backgroundColor = elementValue;
+            } else if (elementId === "isimKutusuRenk") {
+                document.querySelector(".isimKutusu").style.backgroundColor = elementValue;
+            } else if (elementId === "isimKutusuYaziRenk") {
+                document.querySelector(".isimKutusu .isim").style.color = elementValue;
+                document.querySelector(".isimKutusu .unvan").style.color = elementValue;
+            } else if (elementId === "cizgiRenk") {
+                const cizgiler = document.querySelectorAll(".baslik");
+                cizgiler.forEach(cizgi => {
+                    cizgi.style.borderBottomColor = elementValue;
+                });
+            }
+        }
+
+    </script>
+</body>
+</html>
