@@ -1,0 +1,172 @@
+.container{
+    width: 100%;
+}
+.cv-title{
+    border: 1px solid black;
+    text-align: center;
+    margin-bottom: 1px;
+    width: 87.5%;
+}
+.cv-body{
+    display: flex;
+}
+h4 {
+    text-decoration: underline;
+}
+h3 {
+    text-align: center;
+}
+.cv-left {
+    background-color: gray;
+    width: 20%;
+}
+.cv-middle {
+    background-color: lightgray;
+    width: 20%;
+
+}
+.cv-right-left {
+    width: 40%;
+    height: auto;
+    background-color: rebeccapurple;
+    display: flex;
+}
+.cv-right-right {
+    width: 60%;
+    background-color: chocolate;
+    display: flex;
+}
+.cv-right{
+    display: flex;
+}
+.cv {
+    width: 900px;
+    height: 1200px;
+    display: flex;
+    font-family: verdana;
+}
+.solKolon {
+    width: 300px;
+    background-color: red;
+    padding: 30px;
+    margin-left: 30px;
+}
+.sagKolon {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: stretch; 
+    width: 600px;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    background-color: lightgray;
+    text-align: justify;
+    gap: 20px; 
+}
+.kutu {
+    width: 100%;
+    min-height: 50px;
+}
+.sagKolon .icerik {
+    color: white;
+}
+.solKolon .kutu {
+    width: 200px;
+}
+.sagKolon .kutu {
+    width: 500px;
+}
+.kutu .baslik {
+    font-size: 23px;
+    border-bottom: 1px solid #a9a6a6;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    font-weight: 900;
+}
+.kutu .icerik {
+    padding-top: 10px;
+    text-align: justify;
+    display: inline;
+}
+.company {
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.isimKutusu {
+    width: 100%;
+    height: 191px;
+    background-color: #464646;
+    color: white;
+    text-align: center;
+    padding-top: 60px;
+}
+.isimKutusu .isim {
+    font-size: 25px; /* margin-top: 33px; */
+    letter-spacing: 10px;
+    font-family: Verdana;
+    font-weight: 100;
+}
+.isimKutusu .unvan {
+    font-size: 21px;
+    font-family: 'Gotham XLight';
+    letter-spacing: 5px;
+}
+.isimKutusu .cizgi {
+    border-bottom: 4px solid white;
+    margin: 5px auto;
+    width: 100px;
+}
+.foto {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.foto img {
+    border-radius: 100%;
+}
+.satir {
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+}
+.kutu altbaslik {
+    font-size: 10px;
+}
+.altbaslik {
+    margin-top: 10px;
+    font-size: 15px;
+}
+.satir div {
+    display: inline-block;
+    float: left;
+}
+.satir .ikon {
+    width: 22px;
+    height: 22px;
+}
+.satir .ikon img {
+    width: 100%;
+    border-radius: 5px;
+}
+.satir .yazi {
+    padding: 5px;
+}
+.solKolon ul {
+    list-style: none;
+    line-height: 35px;
+    display: inline;
+}
+.egitimbaslik{
+    margin-top: 5px;
+}
+.hakkimdaicerik{
+    
+    padding-left: 15px;
+}
+.isdeneyimiicerik{
+    padding-left: 15px;
+}
+.icerik ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
